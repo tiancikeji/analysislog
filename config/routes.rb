@@ -1,5 +1,8 @@
 require 'sidekiq/web'
 Analysislog::Application.routes.draw do
+  resources :messages
+
+
   authenticated :user do
     root :to => 'home#index'
   end
