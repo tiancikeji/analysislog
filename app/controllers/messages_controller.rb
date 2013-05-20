@@ -40,7 +40,6 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.json
   def create
-
     # @message = Message.new(params[:message])
     # respond_to do |format|
     #   if @message.save
@@ -51,7 +50,7 @@ class MessagesController < ApplicationController
     #     format.json { render json: @message.errors, status: :unprocessable_entity }
     #   end
     # end
-
+    logger.info(request)
   end
 
   # PUT /messages/1
