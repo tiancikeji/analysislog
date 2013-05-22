@@ -52,6 +52,7 @@ class MessagesController < ApplicationController
     # end
     message = request.body
     PygmentsWorker.perform_async(message)
+    render :json => 'ok'
   end
 
   # PUT /messages/1
