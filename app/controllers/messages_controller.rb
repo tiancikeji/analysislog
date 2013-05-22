@@ -50,7 +50,8 @@ class MessagesController < ApplicationController
     #     format.json { render json: @message.errors, status: :unprocessable_entity }
     #   end
     # end
-    logger.info(request)
+    message = request.body
+    PygmentsWorker.perform_async(message)
   end
 
   # PUT /messages/1
