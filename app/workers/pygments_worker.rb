@@ -7,7 +7,7 @@ class PygmentsWorker
     p message
     arr = message.split(" ")
     # if arr[0]!="-" and arr[2].match("TCP_MISS") and arr[1] > 1000 and arr[3]/arr[0]<40 and arr[3]>40
-    if arr[2].match("TCP_MISS")
+    if arr[3].match("TCP_MISS")
       Rtx.send_notify(message)
     end
   end
